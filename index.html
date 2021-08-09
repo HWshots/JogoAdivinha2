@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo do Adivinha 2</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Jogo do Adivinha</h1>
+        <div class="welcome">
+            <img src="images/NGG.jpg" alt="welcome">
+            <p></p>
+            <h2>Vamos jogar</h2>
+            <select id="game" name="game">
+                <option value="1">Nível 1 - 2 minutos com 15 tentativas</option>
+                <option value="2">Nível 2 - 1 minuto com 10 tentativas</option>
+                <option value="3">Nível 3 - 30 segundos com 5 tentativas</option>
+            </select>
+            <button id="newGame">Novo Jogo</button>
+            <button id="gameSettings">Settings</button>
+            </form>
+        </div>
+        <div class="game">
+            <h2>Começa Agora!!!</h2>
+            <label>
+                <input type="number">
+                <button>Jogar</button>
+            </label>
+            <div class="result">
+                <ul>
+                </ul>
+                <img class="result-img" src="images/question-mark.png" alt="play">
+            </div>
+        </div>
+        <div class="game-over">
+            <h2 class="number">Number</h2>
+            <img src="images/sad.png" alt="Game Over">
+            <h2 class="score">Game Over</h2>
+            <p>Tente novamente</p>
+            <button>Novo Jogo</button>
+        </div>
+        <div class="game-settings">
+            <h2>Settings</h2>
+            <div class="settings">
+                <label class="checkbox">
+                    <input type="checkbox" id="noValue">
+                    <span>Aceitar input sem valor</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="outRangeValue">
+                    <span>Aceitar valor fora do intervalo</span>
+                </label>
+                <label class="checkbox">
+                    <input type="checkbox" id="keyboard">
+                    <span>Aceitar tecla "Enter"</span>
+                </label>
+                <label class="numberInput">
+                    <input type="number" id="minValue">
+                    <span>Valor mínimo do jogo</span>
+                </label>
+                <label class="numberInput">
+                    <input type="number" id="maxValue">
+                    <span>Valor máximo do jogo</span>
+                </label>
+            </div>
+            <button>Voltar</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
