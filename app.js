@@ -246,3 +246,11 @@ function init() {
 
 init();
 
+const exit = document.querySelector("#exit");
+exit.addEventListener("click", function(){
+    if (confirm('Quer mesmo sair?')) {
+        location.href='/';
+    } else {
+        return false;
+    }
+});

@@ -4,6 +4,7 @@
     --gray: #eee;
     --border: greenyellow;
     --alternative: orange;
+    --red: red;
 }
 
 * {
@@ -91,6 +92,22 @@ button {
     font-weight: bold;
     color: var(--black);
     cursor: pointer;
+}
+
+#exit{
+    margin: 0;
+    background-color: var(--red);
+    padding: 5px 15px;
+    border: 1px solid var(--black);
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    white-space: nowrap;
+    color: var(--black);
+    cursor: pointer;
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }
 
 .welcome #gameSettings {
