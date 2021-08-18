@@ -25,6 +25,7 @@ let levelSettings = {
 };
 let randomGeneratedNumber;
 let moves;
+let playGame = false;
 let notValid;
 let settingsObj = {
     noValue: true,
@@ -33,6 +34,7 @@ let settingsObj = {
 };
 
 function startGame() {
+    playGame = true;
     welcome.style.display = "none";
     game.style.display = "flex";
     randomGeneratedNumber = Math.floor(Math.random() * (levelSettings.maxValue - levelSettings.minValue + 1) + levelSettings.minValue);
@@ -98,6 +100,7 @@ function validateMove(move) {
 }
 
 function endGame(win) {
+    playGame = false;
     game.style.display = "none";
     gameOver.style.display = "flex";
     let message;
@@ -125,6 +128,7 @@ function endGame(win) {
 }
 
 function reset() {
+    playGame = false;
     welcome.style.display = "flex";
     levelSelect.options.selectedIndex = 0;
     gameTitle.textContent = gameTitleDef;
@@ -166,14 +170,15 @@ function play() {
     startGame();
     const playBtn = document.querySelector('.game button');
     playBtn.addEventListener('click', makeMove);
-    if (settingsObj.keyboard) {
-        gameInput.addEventListener("keyup", function (event) {
+    if (settingsObj.keyboard && playGame) {
+        gameInput.onkeypress = function (event) {
             if (event.key === "Enter") {
-                event.preventDefault();
                 playBtn.click();
+                event.preventDefault();
             }
-        });
+        };
     }
+    
     let maxTimer = levelSettings.maxTime;
     timer = setInterval(function () {
         let currentTime = --maxTimer;
