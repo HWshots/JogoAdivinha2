@@ -177,6 +177,7 @@ button {
     margin-top: 20px;
     border-top: 2px dashed var(--gray);
     width: 100%;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -191,6 +192,7 @@ button {
 .game .result-img {
     padding: 10px;
     width: 50%;
+    height: fit-content;
 }
 
 .game .result ul li {
