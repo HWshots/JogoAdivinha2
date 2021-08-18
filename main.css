@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 :root {
     --black: black;
     --white: white;
@@ -192,6 +199,8 @@ button {
 .game .result-img {
     padding: 10px;
     width: 50%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
 }
 
