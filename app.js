@@ -69,6 +69,7 @@ function makeMove() {
     else {
         console.log("Não foi inserido nenhum numero!!!");
     }
+    gameInput.focus();
 }
 
 function validateMove(move) {
